@@ -1,0 +1,86 @@
+[
+  {
+    "index": 47,
+    "original_message": {
+      "publisher_inn": "",
+      "msg_text": "Сообщение без ИНН публикатора. Тестовая запись.",
+      "date_published": "2025-04-25",
+      "type": "Подача заявления",
+      "case_number": "А60-24680/2025"
+    },
+    "errors": [
+      "ValueError: Поле 'publisher_inn' пустое"
+    ],
+    "validation_summary": "ValueError: Поле 'publisher_inn' пустое"
+  },
+  {
+    "index": 49,
+    "original_message": {
+      "publisher_inn": "7701234567",
+      "msg_text": "Сообщение с некорректной датой.",
+      "date_published": null,
+      "type": "Введение процедуры",
+      "case_number": "А60-36925/2025"
+    },
+    "errors": [
+      "ValueError: Не удалось распарсить дату 'None'"
+    ],
+    "validation_summary": "ValueError: Не удалось распарсить дату 'None'"
+  },
+  {
+    "index": 50,
+    "original_message": {
+      "publisher_inn": "7702345678",
+      "msg_text": "Сообщение без типа.",
+      "date_published": "2025-03-10",
+      "type": null,
+      "case_number": "А60-25814/2025"
+    },
+    "errors": [
+      "ValueError: Поле 'type' пустое или не является строкой"
+    ],
+    "validation_summary": "ValueError: Поле 'type' пустое или не является строкой"
+  },
+  {
+    "index": 51,
+    "original_message": {
+      "publisher_inn": "7705",
+      "msg_text": "Сообщение с коротким ИНН. Долг: 1 000 000 руб.",
+      "date_published": "2025-02-01",
+      "type": "Подача заявления",
+      "case_number": "А60-12345/2025"
+    },
+    "errors": [
+      "ValueError: ИНН '7705' имеет неверную длину (должен быть 10 или 12 цифр)"
+    ],
+    "validation_summary": "ValueError: ИНН '7705' имеет неверную длину (должен быть 10 или 12 цифр)"
+  },
+  {
+    "index": 52,
+    "original_message": {
+      "publisher_inn": "6658123450",
+      "msg_text": "Сообщение с датой в неизвестном формате. ООО \"Гамма-Трейд\". АС Свердловской области.",
+      "date_published": "ДАТА УТЕРЯНА",
+      "type": "Завершение процедуры",
+      "case_number": "А60-56789/2025"
+    },
+    "errors": [
+      "ValueError: Не удалось распарсить дату 'ДАТА УТЕРЯНА'"
+    ],
+    "validation_summary": "ValueError: Не удалось распарсить дату 'ДАТА УТЕРЯНА'"
+  },
+  {
+    "index": 53,
+    "original_message": {
+      "publisher_inn": "7703901234",
+      "msg_text": "Сообщение без номера дела.",
+      "date_published": "15.05.2025",
+      "type": "Собрание кредиторов",
+      "case_number": ""
+    },
+    "errors": [
+      "ValueError: Поле 'case_number' пустое или не является строкой"
+    ],
+    "validation_summary": "ValueError: Поле 'case_number' пустое или не является строкой"
+  }
+]
